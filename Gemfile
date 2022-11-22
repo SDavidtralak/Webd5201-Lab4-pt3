@@ -3,6 +3,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.4"
 
+gem "ffi"
+
+gem 'bootstrap-sass',       '3.4.1'
+gem 'rails-controller-testing'
+gem 'bcrypt', '~> 3.1.10', require: false
+if Bundler::WINDOWS
+  gem 'bcrypt-ruby', '3.1.2', require: false
+else
+  gem 'bcrypt', '~> 3.1.10', require: false
+end
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -55,7 +66,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  #gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
