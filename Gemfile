@@ -13,6 +13,8 @@ if Bundler::WINDOWS
 else
   gem 'bcrypt', '~> 3.1.10', require: false
 end
+gem 'faker'
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
